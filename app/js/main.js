@@ -1,5 +1,8 @@
 $(function () {
 
+
+  $('.select-style').styler();
+
   $('.filter-price__input').ionRangeSlider({
     type: 'double',
     prefix: '$',
