@@ -65,12 +65,6 @@ $(function () {
     autoplaySpeed: 2000,
   });
 
-  $('.star-review').rateYo({
-    starWidth: "20px",
-    normalFill: "#ccccce",
-    ratedFill: "#ffc35b",
-    fullStar: true,
-  })
 
   $('.star').rateYo({
     starWidth: "17px",
