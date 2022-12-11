@@ -2142,6 +2142,10 @@
     margin-bottom: 20px;
     display: flex;
 
+    &:last-child {
+      margin-bottom: 0;
+    }
+
     &+& {
       border-top: 1px solid #ececec;
       padding-top: 20px;
@@ -2180,6 +2184,169 @@
       left: 0;
       top: 5px;
     }
+  }
+}
+
+.blog-one {
+
+  &__text {
+    border: 1px solid #ececec;
+    border-top: none;
+    padding: 30px;
+    margin-top: -1px;
+
+    h4 {
+      @extend %roboto-500;
+      font-size: 22px;
+      color: $title;
+      margin: 20px 0;
+    }
+  
+    p {
+      margin: 25px 0;
+    }
+  
+    blockquote {
+      background-color: $bg;
+      border-left: 3px solid $accent;
+      padding: 35px;
+      @extend %roboto-400;
+      font-size: 22px;
+      color: $title;
+      line-height: 32px;
+      margin: 25px 0;
+    }
+  
+  }
+  
+  &__left-img {
+    float: left;
+    margin-right: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__right-img {
+    float: right;
+    margin-left: 30px;
+    margin-bottom: 10px;
+  }
+
+  &__info {
+    display: flex;
+    align-items: center;
+    margin-bottom: 25px;
+  }
+
+  &__info-link {
+    margin-right: 30px;
+    padding-left: 28px;
+    position: relative;
+
+    &::before {
+      position: absolute;
+      content: '';
+      left: 0;
+      top: 2px;
+      width: 16px;
+      height: 16px;
+      background-image: url(../images/icons/calendar.svg);
+    }
+  }
+
+  &__info-link--comments::before {
+    background-image: url(../images/icons/comment.svg);
+    top: 3px;
+  }
+
+  &__info-link--author::before {
+    background-image: url(../images/icons/author.svg);
+  }
+
+  &__form-title {
+    text-transform: uppercase;
+    margin: 35px 0 25px;
+    color: $title;
+    @extend %roboto-700;
+    font-size: 24px;
+  }
+
+  .comments-form {
+    border-bottom: none;
+  }
+
+  &__box {
+    margin: 25px 30px 35px;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__tags,
+  &__share {
+    span {
+      text-transform: uppercase;
+      color: $title;
+    }
+  }
+
+  &__share {
+
+    a {
+      vertical-align: middle;
+      path {
+        fill: #727272;
+        transition: all .3s;
+      }
+
+      &:hover {
+        path {
+          fill: $accent;
+        }
+      }
+    }
+
+    a:first-child {
+      padding-left: 5px;
+    }
+    a + a {
+      padding-left: 14px;
+    }
+  }
+
+  &__author {
+    display: flex;
+    padding-bottom: 40px;
+    border-bottom: 1px solid #ececec;
+    margin-bottom: 40px;
+  }
+
+  &__author-img {
+    margin-right: 30px;
+  }
+
+  &__author-name {
+    @extend %roboto-500;
+    font-size: 22px;
+    line-height: 26px;
+    color: $title;
+    margin-bottom: 20px;
+  }
+
+  &__comment-title {
+    @extend %roboto-700;
+    font-size: 24px;
+    line-height: 26px;
+    color: $title;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+  }
+
+  &__comments {
+    border-bottom: 1px solid #ececec;
+  }
+
+  .comments-form__text-input {
+    max-width: 370px;
+    height: 60px;
   }
 }
 
