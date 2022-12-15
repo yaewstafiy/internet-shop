@@ -91,10 +91,8 @@ function build() {
 function watching() {
   watch(['app/**/*.scss'], styles);
   watch(['app/nunjucks/*.njk'], nunjucks);
-  watch(['app/modules/**/*.njk'], nunjucks);
   watch(['app/js/**/*.js', '!app/js/main.min.js'], scripts);
   watch(['app/*.html']).on('change', browserSync.reload);
-  watch(['app/modules/**/*.html']).on('change', browserSync.reload);
 }
 
 exports.styles = styles;
