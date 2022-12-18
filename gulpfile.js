@@ -80,7 +80,7 @@ function styles() {
 
 function build() {
   return src([
-    'app/css/style.min.css',
+    'app/css/*.css',
     'app/fonts/**/*',
     'app/js/main.min.js',
     'app/*.html'
