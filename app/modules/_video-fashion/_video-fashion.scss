@@ -1,5 +1,5 @@
 .video-fashion {
-  padding: 120px 0 120px;
+  padding: 120px 0;
   background-image: url('../images/decor/pattern.svg');
   background-color: $bg;
   background-size: cover;
@@ -46,4 +46,37 @@
   &__link {
     @extend %btn;
   }
+}
+
+@media (max-width: 1050px) {
+  .video-fashion {
+    padding: 60px 0;
+
+    &__inner {
+      display: block;
+    }
+
+    &__popup {
+      max-width: 100%;
+      background-position: center top;
+    }
+
+    &__content {
+      max-width: 100%;
+    }
+  }
+}
+
+@media (max-width: 620px) {
+  .video-fashion {
+    &__popup {
+      height: 270px;
+    }
+
+    &__subtitle {
+      padding-top: 40px;
+      font-size: 18px;
+    }
+  }
+
 }

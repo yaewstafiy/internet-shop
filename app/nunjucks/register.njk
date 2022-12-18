@@ -6,7 +6,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Internet Shop</title>
-  <link rel="stylesheet" href="css/register.min.css">
+  <link rel="stylesheet" href="css/login.min.css">
 </head>
 
 <body>
@@ -15,23 +15,7 @@
 
   <main class="main">
 
-    <section class="top">
-      <div class="top__container" style="background-image: url('images/top-bg.jpg')">
-        <div class="container">
-          <h2 class="top__title title">Register</h2>
-          <div class="breadcrumbs">
-            <ul class="breadcrumbs__list">
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="index.html">Home</a>
-              </li>
-              <li class="breadcrumbs__item">
-                <a class="breadcrumbs__link" href="#">Register</a>
-              </li>
-            </ul>
-          </div>
-        </div>
-      </div>
-    </section>
+    {% include 'app/modules/_top/_top.html' %}
 
     {% include 'app/modules/_register/_register.html' %}
 

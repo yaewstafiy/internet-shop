@@ -1,5 +1,9 @@
 .header {
   padding: 40px 0;
+  position: fixed;
+  width: 100%;
+  background-color: #fff;
+  z-index: 1000;
 
   &__inner {
     display: flex;
@@ -11,6 +15,7 @@
 .menu {
   &__btn {
     display: none;
+    z-index: 100;
   }
 
   &__list {
@@ -88,17 +93,18 @@
 
     &__list {
       position: absolute;
-      transform: translateY(-200%);
-      top: 120px;
+      transform: translateY(-150%);
+      top: 100px;
       width: 100%;
       left: 0;
       flex-direction: column;
       align-items: center;
       z-index: 5;
-      transition: all .3s;
+      transition: all .3s ease;
       background-color: #fff;
 
       &.menu__list--active {
+        transition: all .5s cubic-bezier(0.57, 0, 0.38, 1);
         transform: translateY(0);
       }
     }
@@ -119,7 +125,7 @@
     }
 
     &__btn {
-      width: 30px;
+      width: 32px;
       height: 19px;
       border: none;
       background-color: transparent;
@@ -138,6 +144,7 @@
 
       &::before,
       &::after {
+        transition: .3s;
         content: '';
         position: absolute;
         width: 100%;
@@ -151,6 +158,27 @@
 
       &::after {
         bottom: 0;
+      }
+    }
+
+    &__btn--active {
+      
+      transition: all .5s;
+
+      &::before {
+        transition: .3s;
+        transform: rotate(45deg);
+        top: 8px;
+      }
+
+      &::after {
+        transition: .3s;
+        transform: rotate(-45deg);
+        bottom: 9px;
+      }
+
+      span {
+        display: none;
       }
     }
   }

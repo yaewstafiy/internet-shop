@@ -14,6 +14,7 @@ body {
 
 .main {
   flex-grow: 1;
+  margin-top: 110px
 }
 
 .container {
@@ -47,6 +48,7 @@ a {
 .breadcrumbs {
   display: inline-flex;
   justify-content: center;
+  flex-wrap: wrap;
   padding-left: 25px;
   position: relative;
 
@@ -155,6 +157,7 @@ a {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+  flex-wrap: wrap;
 
   &__author,
   &__date {
@@ -171,11 +174,31 @@ a {
     }
   }
 
+  &__author {
+    margin-right: 10px;
+  }
+
   &__author::before {
     background-image: url(../images/icons/user-grey.svg);
   }
 
   &__date::before {
     background-image: url(../images/icons/time.svg);
+  }
+}
+
+
+
+@media (max-width: 620px) {
+  .title {
+    font-size: 40px;
+    line-height: 48px;
+  }
+}
+
+@media (max-width: 375px) {
+  .title {
+    font-size: 32px;
+    line-height: 36px;
   }
 }

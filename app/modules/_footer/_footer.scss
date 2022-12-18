@@ -48,10 +48,10 @@
   }
 
   &__social-link {
-    transition: all .3s;
-
+    
     path {
       fill: $default;
+      transition: all .3s;
     }
 
     &:hover {
@@ -160,6 +160,11 @@
 
     &__title--slide {
       position: relative;
+
+      &:hover {
+        color: $accent;
+        cursor: pointer;
+      }
     }
 
     &__title--slide::after {
@@ -170,11 +175,11 @@
       top: 8px;
       right: 0;
       transition: all .5s;
-      background-image: url(../../images/icons/angle-down.svg);
+      background-image: url(../images/icons/angle-down.svg);
     }
 
     &__title--active::after {
-      background-image: url(../../images/icons/angle-down.svg);
+      background-image: url(../images/icons/angle-down.svg);
       transform: rotate(180deg);
     }
   }
@@ -189,10 +194,6 @@
       text-align: center;
     }
   }
-
-  .footer-top {
-    &__nav {}
-  }
 }
 
 @media (max-width: 450px) {
@@ -203,6 +204,7 @@
 
     &__form-input {
       margin-right: 0;
+      margin-bottom: 10px;
       max-width: 100%;
     }
 
