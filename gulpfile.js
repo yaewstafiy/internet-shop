@@ -74,7 +74,7 @@ function styles() {
       overrideBrowserslist: ['last 10 version'],
       grid: true
     }))
-    .pipe(dest('app/css/'))
+    .pipe(dest('app/css'))
     .pipe(browserSync.stream())
 }
 

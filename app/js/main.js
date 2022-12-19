@@ -1,6 +1,5 @@
 $(function () {
 
-
   $('.shop__filter-btn').on('click', function () {
     $(this).toggleClass('shop__filter-btn--active')
     $('.shop__filters').slideToggle();

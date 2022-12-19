@@ -30,6 +30,11 @@ a {
   @extend %quicksand-500;
 }
 
+button,
+a {
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
 .title {
   @extend %roboto-700;
   font-size: 48px;
@@ -198,8 +203,9 @@ a {
 
 @media (max-width: 500px) {
   .main {
-    margin-top: 140px;
+    margin-top: 70px;
   }
+
 }
 
 @media (max-width: 375px) {
